@@ -4,6 +4,7 @@ import "./Pagination.css";
 const Pagination = ({ currentPage, totalPages, onPageChange }) => {
   return (
     <div className="pagination">
+      <button onClick={() => onPageChange(currentPage - 1)} disabled={currentPage === 1}>
         ◀ Назад
       </button>
       <span>
@@ -16,5 +17,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
         Вперёд ▶
       </button>
     </div>
+  );
+};
 
 export default Pagination;
